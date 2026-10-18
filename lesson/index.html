@@ -607,6 +607,129 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   .phn{width:230px}
   .dock{left:50%;right:auto;width:560px;margin-left:-280px}
 }
+
+/* ===== visuals v2 ===== */
+.band{position:relative;z-index:3;width:124%;margin:-8px 0 44px -12%;rotate:-3deg;background:linear-gradient(90deg,#FF6A6E,#F84A4F 45%,#D92D45);color:#fff;padding:13px 0;box-shadow:0 16px 30px -14px rgba(248,74,79,.7);overflow:hidden}
+.band.blue{background:linear-gradient(90deg,#1BA3EC,#037DC2 60%,#0563A0);rotate:2.5deg;box-shadow:0 16px 30px -14px rgba(3,125,194,.7)}
+.band .track{display:flex;width:max-content;animation:mq 30s linear infinite}
+html.gs .band .track{animation:none}
+.band span{display:flex;align-items:center;gap:20px;padding-right:20px;font:italic 400 21px/1 var(--serif);white-space:nowrap}
+.band span i{font:700 13px/1 var(--sans);font-style:normal;opacity:.75}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+.scene{position:relative;margin-top:18px;border-radius:20px;overflow:hidden;height:290px;background:linear-gradient(180deg,#F7F2EB,#EEE2D3);color:var(--ink)}
+.scene .shelves{position:absolute;left:16px;right:96px;top:16px;display:grid;gap:12px}
+.scene .row{display:flex;gap:5px;align-items:flex-end;border-bottom:4px solid #C9A98A;height:34px}
+.scene .row i{display:block;width:14px;border-radius:3px 3px 1px 1px}
+.scene .ecz{position:absolute;right:18px;top:18px;width:60px;height:60px;border-radius:12px;background:#fff;display:grid;place-items:center;box-shadow:0 8px 20px -10px rgba(227,10,23,.6)}
+.scene .ecz b{font:700 40px/1 var(--sans);color:#E30A17}
+.scene .ecz small{position:absolute;bottom:-16px;font:700 8px/1 var(--sans);letter-spacing:.12em;color:#9C7A5C}
+.scene .counter{position:absolute;left:0;right:0;bottom:0;height:74px;background:linear-gradient(180deg,#fff,#E6ECF4);border-top:5px solid var(--blue);z-index:3}
+.scene .counter::after{content:"";position:absolute;left:50%;top:14px;width:46px;height:30px;translate:-50% 0;border-radius:6px;background:#DDE6F0;box-shadow:inset 0 -6px 0 #C7D3E0}
+.ppl{position:absolute;bottom:60px;width:70px;height:110px;z-index:2}
+.ppl.me{left:28px}.ppl.ph{right:28px}
+.ppl .hd{position:absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;border-radius:50%;background:#F1C9A5}
+.ppl .hd::before{content:"";position:absolute;left:-2px;right:-2px;top:-3px;height:18px;border-radius:20px 20px 6px 6px;background:#2B2B33}
+.ppl.ph .hd::before{background:#6B4A3A}
+.ppl .bd{position:absolute;left:50%;top:40px;width:62px;height:80px;margin-left:-31px;border-radius:26px 26px 8px 8px;background:#FF9093}
+.ppl.ph .bd{background:#fff;box-shadow:inset 0 0 0 2px #E3E8EF}
+.ppl.ph .bd::after{content:"";position:absolute;left:50%;top:6px;width:24px;height:22px;margin-left:-12px;border:3px solid #2FBF9A;border-top:0;border-radius:0 0 14px 14px}
+.ppl .arm{position:absolute;top:46px;width:14px;height:44px;border-radius:8px;background:#F1C9A5;transform-origin:50% 6px}
+.ppl.me .arm{right:-4px}.ppl.ph .arm{left:-4px;background:#fff;box-shadow:inset 0 0 0 2px #E3E8EF}
+.sbx{position:absolute;top:96px;max-width:48%;z-index:4;background:#fff;border-radius:16px;padding:9px 12px;font:600 13.5px/1.25 var(--sans);box-shadow:0 12px 26px -12px rgba(0,0,0,.35);display:inline-flex;gap:7px;align-items:center}
+.sbx .ic{font-size:17px;color:var(--red)}
+.sbx.me{left:14px;top:62px;border-bottom-left-radius:4px}
+.sbx.ph{right:14px;top:92px;border-bottom-right-radius:4px;background:var(--blue);color:#fff}
+.sbx.ph .ic{color:#fff}
+.sbx.pop{animation:pop .35s cubic-bezier(.3,1.6,.5,1) both}
+.scene .cap{position:absolute;left:14px;top:110px;font:italic 400 13px/1 var(--serif);color:#9C7A5C;display:none}
+
+.queue{display:flex;gap:12px;align-items:stretch;margin-top:18px}
+.board{flex:1;background:#101014;border-radius:16px;padding:14px 16px;color:#fff;position:relative;overflow:hidden;box-shadow:0 18px 34px -20px rgba(0,0,0,.6)}
+.board small{display:block;font:700 9.5px/1.3 var(--sans);letter-spacing:.14em;color:#7D8191}
+.board b{display:block;font:700 54px/1 ui-monospace,'SF Mono',Menlo,monospace;color:#FF5A5F;text-shadow:0 0 16px rgba(255,90,95,.75);margin:8px 0 6px;font-variant-numeric:tabular-nums}
+.board span{font-size:11.5px;color:#9A9EAB}
+.board::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 4px);pointer-events:none}
+.ticket{width:124px;flex:none;background:#fff;border-radius:6px;padding:14px 10px;text-align:center;position:relative;box-shadow:0 20px 34px -18px rgba(20,30,60,.5);
+  -webkit-mask:radial-gradient(circle 8px at 0 64%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 64%,transparent 97%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 8px at 0 64%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 8px at 100% 64%,transparent 97%,#000) right/51% 100% no-repeat}
+.ticket small{display:block;font:700 9px/1 var(--sans);letter-spacing:.16em;color:var(--mut2)}
+.ticket b{display:block;font:400 50px/1.05 var(--serif);margin:6px 0 10px}
+.ticket .cut{border-top:1.5px dashed #D5DAE3;margin:0 4px 9px}
+.ticket span{font-size:11px;color:var(--blue);font-weight:700;letter-spacing:.04em}
+
+.thermo{display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:center;margin-top:16px}
+.tsvg{width:76px;height:230px;overflow:visible;display:block}
+.tdeg{font:300 58px/1 var(--serif);color:#fff;font-variant-numeric:tabular-nums}
+.tdeg sup{font-size:26px;vertical-align:28px;color:#8E92A0}
+.ttr{font:italic 400 19px/1.3 var(--serif);color:var(--sky);margin-top:6px;min-height:2.6em}
+.tst{display:inline-flex;gap:6px;align-items:center;margin-top:6px;padding:7px 11px;border-radius:999px;font:700 11px/1 var(--sans);letter-spacing:.04em;background:rgba(248,74,79,.16);color:var(--red2)}
+.tst.ok{background:rgba(95,207,255,.13);color:var(--sky)}
+.thermo input{width:100%;accent-color:var(--red);margin:14px 0 6px;height:26px}
+.thermo .tnote{font-size:12px;color:#8E92A0;line-height:1.45}
+.thermo .tnote b{color:#fff;font-weight:600}
+
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:14px 0 4px}
+.cal div{aspect-ratio:1/1.2;border-radius:10px;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font:700 10px/1 var(--sans);color:var(--mut2);transition:background .25s,color .25s}
+.cal div .ic{font-size:15px;opacity:0;transition:opacity .25s}
+.cal div.on{background:#FFE3E3;color:var(--red)}
+.cal div.on .ic{opacity:1}
+
+.sched{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 0}
+.slot{border-radius:14px;padding:10px 4px 12px;text-align:center;background:#F3F6FA;border:1px solid var(--line);opacity:.4;transition:opacity .3s,background .3s,box-shadow .3s}
+.slot.on{opacity:1;background:#fff;box-shadow:0 12px 24px -16px rgba(3,125,194,.55)}
+.slot>.ic{font-size:22px;color:#F2A13A}
+.slot:nth-child(3)>.ic{color:#7A6BD8}
+.slot b{display:block;font:700 12px/1.2 var(--sans);margin-top:4px}
+.slot small{display:block;font-size:10.5px;color:var(--mut)}
+.seq{display:flex;align-items:center;justify-content:center;gap:3px;margin-top:9px;min-height:30px}
+.seq .tk{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:14px;color:#fff;flex:none}
+.seq .food{background:#DCAD93}
+.seq .med{background:var(--blue)}
+.seq .ar{font-size:10px;color:var(--mut2);font-weight:700}
+
+.night{position:relative;margin-top:18px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,#0A1430 0,#15254A 62%,#22355F 100%);color:#fff;padding:18px 18px 0}
+.night .nt{position:relative;z-index:2;padding-right:56px}
+.night .nt b{font:400 20px/1.25 var(--serif)}
+.night .nt p{margin:6px 0 0;font-size:13px;color:#B9C2DA;line-height:1.5}
+.night .moon{position:absolute;right:26px;top:20px;width:34px;height:34px;border-radius:50%;box-shadow:-9px 6px 0 0 #FDF0BE;rotate:-20deg}
+.night .stars i{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15}}
+.street{position:relative;height:170px;margin-top:10px}
+.street::after{content:"";position:absolute;left:-18px;right:-18px;bottom:0;height:14px;background:#0B1226}
+.shop{position:absolute;bottom:14px;width:46%;height:112px;background:#2C3860;border-radius:8px 8px 0 0}
+.shop.open{left:0}.shop.closed{right:0;background:#1C2647}
+.shop .sg{position:absolute;left:50%;top:-30px;translate:-50% 0;width:46px;height:46px;border-radius:9px;background:#fff;display:grid;place-items:center;box-shadow:0 0 20px rgba(227,10,23,.75),0 0 56px rgba(227,10,23,.35);animation:neon 3.4s infinite}
+.shop .sg b{font:700 34px/1 var(--sans);color:#E30A17}
+.shop.closed .sg{background:#3A4468;box-shadow:none;animation:none}
+.shop.closed .sg b{color:#596389}
+@keyframes neon{0%,18%,24%,62%,66%,100%{opacity:1}20%,22%,64%{opacity:.35}}
+.shop .lb{position:absolute;left:8px;right:8px;top:24px;text-align:center;font:700 8.5px/1 var(--sans);letter-spacing:.12em;padding:5px 0;border-radius:4px;background:#E30A17;color:#fff;box-shadow:0 0 14px rgba(227,10,23,.65)}
+.shop.closed .lb{background:#2A3456;color:#7680A6;box-shadow:none}
+.shop .wn{position:absolute;left:10px;bottom:0;width:42%;height:52px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#FFEAAD,#F3C25A);box-shadow:0 0 26px rgba(255,214,110,.5)}
+.shop .dr{position:absolute;right:10px;bottom:0;width:30%;height:66px;border-radius:4px 4px 0 0;background:linear-gradient(180deg,#FFEAAD,#EFB648);box-shadow:0 0 26px rgba(255,214,110,.5)}
+.shop.closed .wn,.shop.closed .dr{background:#151D38;box-shadow:none}
+.shop .note{position:absolute;right:16%;bottom:24px;width:26px;height:32px;background:#F4F1E6;border-radius:2px;rotate:6deg;padding:4px 3px;display:grid;gap:3px;align-content:start}
+.shop .note i{height:2px;background:#9AA3BD;border-radius:2px}
+.street .hint2{position:absolute;right:4%;top:6px;font:italic 400 12px/1.2 var(--serif);color:#B9C2DA;text-align:right}
+
+.sos{display:flex;gap:18px;align-items:center;justify-content:center;margin:20px 0 8px;flex-wrap:wrap}
+.sosb{width:150px;height:150px;font-size:48px}
+.dial{width:150px;border-radius:28px;padding:10px 10px 14px;background:#1B1B20;box-shadow:inset 0 0 0 1.5px #2E2E36,0 20px 40px -20px rgba(0,0,0,.7)}
+.dscr{height:58px;border-radius:16px;background:#0E0E12;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:10px;position:relative;overflow:hidden}
+.dscr b{font:300 26px/1 var(--serif);letter-spacing:.12em;color:#fff;min-height:26px}
+.dscr small{font-size:10px;color:#8E92A0;margin-top:4px}
+.dscr.call{background:linear-gradient(180deg,#123A2A,#0E0E12)}
+.dscr.call small{color:#5BE39A}
+.keys{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.keys span{height:28px;border-radius:999px;background:#26262D;display:grid;place-items:center;font:500 13px/1 var(--sans);color:#C9CBD4;transition:background .15s,color .15s,scale .15s}
+.keys span.hit{background:var(--red);color:#fff;scale:1.1}
+
+.g128{display:grid;grid-template-columns:repeat(16,1fr);gap:4px;margin-top:4px}
+.g128 i{aspect-ratio:1;border-radius:3px;background:rgba(255,255,255,.08)}
+.g128 i.me{background:var(--red);box-shadow:0 0 12px rgba(248,74,79,.85)}
+.g128+small{display:block;font-size:12px;color:#8E92A0;margin-top:10px}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 
@@ -694,6 +817,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 <symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
 <symbol id="i-languages" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
 <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+<symbol id="i-candy" viewBox="0 0 24 24"><path d="m9.5 7.5-2 2a4.95 4.95 0 1 0 7 7l2-2a4.95 4.95 0 1 0-7-7Z"/><path d="M14 6.5v10"/><path d="M10 7.5v10"/><path d="m16 7 1-5 1.37.68A3 3 0 0 0 19.7 3H21v1.3c0 .46.1.92.32 1.33L22 7l-5 1"/><path d="m8 17-1 5-1.37-.68A3 3 0 0 0 4.3 21H3v-1.3a3 3 0 0 0-.32-1.33L2 17l5-1"/></symbol>
+<symbol id="i-skull" viewBox="0 0 24 24"><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="12" r="1"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+<symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m8 6 4-4 4 4"/><path d="M16 18a4 4 0 0 0-8 0"/></symbol>
+<symbol id="i-sunset" viewBox="0 0 24 24"><path d="M12 10V2"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m16 6-4 4-4-4"/><path d="M16 18a4 4 0 0 0-8 0"/></symbol>
+<symbol id="i-flask-conical" viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2"/><path d="M13 17v2"/><path d="M13 11v2"/></symbol>
+<symbol id="i-phone-outgoing" viewBox="0 0 24 24"><polyline points="22 8 22 2 16 2"/><line x1="16" x2="22" y1="8" y2="2"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
 
 </svg>
 
@@ -768,6 +899,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <p class="end">Градусник, кстати, я так и не вернул.</p>
       </article>
     </div>
+    <div class="scene rv" id="scene" aria-label="Сцена: я и аптекарша играем в крокодила">
+      <div class="shelves"><div class="row" data-n="11"></div><div class="row" data-n="9"></div></div>
+      <div class="ecz"><b>E</b><small>ECZANE</small></div>
+      <div class="ppl me" id="pMe"><span class="arm" id="armMe"></span><span class="bd"></span><span class="hd"></span></div>
+      <div class="ppl ph" id="pPh"><span class="arm"></span><span class="bd"></span><span class="hd"></span></div>
+      <div class="sbx me" id="sbMe">Merhaba!</div>
+      <div class="sbx ph" id="sbPh">Buyurun?</div>
+      <div class="counter"></div>
+    </div>
     <p class="moral rv">Как всё-таки важно уметь формулировать свои симптомы и доносить их до людей. Ниже — как это делать.</p>
   </div>
   <i class="notch"></i>
@@ -778,6 +918,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   <svg class="ribbon" id="ribRoute" viewBox="0 0 300 600" style="right:-120px;top:40px;width:300px;height:600px" aria-hidden="true">
     <path class="rb" d="M300 0 C 180 80, 120 140, 200 220 S 260 360, 120 420 S 60 560, 200 640"/>
   </svg>
+  <div class="band" aria-hidden="true"><div class="track"><span>Geçmiş olsun <i>✚</i> Başım ağrıyor <i>✚</i> Ateşim var <i>✚</i> Nöbetçi eczane <i>✚</i> Tok karnına <i>✚</i> Randevu <i>✚</i> 112 <i>✚</i></span><span>Geçmiş olsun <i>✚</i> Başım ağrıyor <i>✚</i> Ateşim var <i>✚</i> Nöbetçi eczane <i>✚</i> Tok karnına <i>✚</i> Randevu <i>✚</i> 112 <i>✚</i></span></div></div>
   <div class="wrap">
     <p class="eyebrow">Маршрут</p>
     <h2 class="h2 split-h">Как будет проходить <em>приём</em> по шагам</h2>
@@ -807,6 +948,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <div class="bub l rv">Sıra numaranızı alın.<small>Возьмите номерок.</small><button class="say" data-say="Sıra numaranızı alın." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
       </div>
       <p class="dan rv">Я взял номерок. Сорок семь. На табло было двенадцать. Я почти успел выздороветь.</p>
+      <div class="queue rv" aria-hidden="true">
+        <div class="board"><small>ŞU AN · СЕЙЧАС</small><b id="qNow">12</b><span>Dahiliye · 3 numaralı oda</span></div>
+        <div class="ticket" id="ticket"><small>SIRA NO</small><b>47</b><div class="cut"></div><span>DAHİLİYE</span></div>
+      </div>
     </div>
     <div>
       <div class="phr">
@@ -883,6 +1028,24 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       <button class="tab2" data-tab="verb" role="tab">Глаголом · «я делаю»</button>
     </div>
     <div class="flips" id="flips"></div>
+    <div class="card thermo rv">
+      <svg class="tsvg" viewBox="0 0 76 230" aria-hidden="true">
+        <defs><linearGradient id="gTube" x1="0" x2="1"><stop offset="0" stop-color="#2A2A32"/><stop offset=".5" stop-color="#3A3A44"/><stop offset="1" stop-color="#2A2A32"/></linearGradient></defs>
+        <rect x="26" y="8" width="20" height="176" rx="10" fill="url(#gTube)" stroke="rgba(255,255,255,.14)"/>
+        <circle cx="36" cy="200" r="22" fill="#2A2A32" stroke="rgba(255,255,255,.14)"/>
+        <rect id="merc" x="31" y="80" width="10" height="120" rx="5" fill="#F84A4F"/>
+        <circle id="bulb" cx="36" cy="200" r="16" fill="#F84A4F"/>
+        <circle cx="30" cy="194" r="5" fill="rgba(255,255,255,.35)"/>
+        <g id="ticks" font-family="Montserrat,sans-serif" font-size="9" fill="#8E92A0"></g>
+      </svg>
+      <div>
+        <div class="tdeg"><span id="tNum">38,5</span><sup>°C</sup></div>
+        <div class="ttr" id="tTr">otuz sekiz buçuk derece</div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="tst" id="tSt">Yüksek ateşim var</span><button class="say" id="tSay" aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <input type="range" min="36" max="41" step="0.5" value="38.5" id="tRange" aria-label="Температура">
+        <p class="tnote">Помнишь мои двенадцать пальцев? Говори словами: <b>otuz dokuz</b> — 39. <b>Buçuk</b> — «с половиной».</p>
+      </div>
+    </div>
     <div class="card rv" style="margin-top:16px;display:flex;gap:12px;align-items:center">
       <div style="flex:1"><b style="font:400 19px/1.3 var(--serif);color:#fff">Kendimi kötü hissediyorum.</b><div style="font-size:13px;color:#A9ADBA">Я плохо себя чувствую. Универсальная фраза, если ничего не помнишь.</div></div>
       <button class="say" data-say="Kendimi kötü hissediyorum." aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button>
@@ -902,6 +1065,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
       <div class="card days">
         <div class="big"><span class="num" id="dNum">üç</span><span>gün<span class="suf" id="dSuf">dür</span></span></div>
         <p class="ru" id="dRu" style="font-size:14px;color:var(--mut);margin:6px 0 0">Уже три дня.</p>
+        <div class="cal" id="cal" aria-hidden="true"></div>
         <input type="range" min="1" max="7" value="3" id="dRange" aria-label="Сколько дней">
         <div class="scale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span></div>
         <div class="words" style="margin-top:14px">
@@ -974,6 +1138,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         </div>
         <div class="sent" id="rxSent"></div>
         <div class="ru"><span id="rxRu"></span><button class="say" id="rxSay" aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        <div class="sched" id="sched">
+          <div class="slot" data-k="sabah"><svg class="ic"><use href="#i-sunrise"/></svg><b>sabah</b><small>утро</small><div class="seq"></div></div>
+          <div class="slot" data-k="öğle"><svg class="ic"><use href="#i-sun"/></svg><b>öğle</b><small>обед</small><div class="seq"></div></div>
+          <div class="slot" data-k="akşam"><svg class="ic"><use href="#i-moon"/></svg><b>akşam</b><small>вечер</small><div class="seq"></div></div>
+        </div>
         <p style="font-size:12px;color:var(--mut);margin:10px 0 0" id="rxNote">Şurup → şurubu: p на конце становится b. Та же история, что с kulak → kulağım.</p>
       </div>
     </div>
@@ -993,7 +1162,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
         <span class="w" data-say="antibiyotik"><b>antibiyotik</b>антибиотик</span>
         <span class="w" data-say="yan etki"><b>yan etki</b>побочка</span>
       </div>
-      <div class="nob rv"><svg class="ic"><use href="#i-house"/></svg><div><b>Ночью ищи nöbetçi eczane</b><p>Дежурная аптека. На двери любой закрытой аптеки висит список дежурных на сегодня. Я узнал об этом на третью ночь.</p></div></div>
+      <div class="night rv">
+        <div class="stars" id="stars"></div><div class="moon"></div>
+        <div class="nt"><b>Ночью ищи nöbetçi eczane</b><p>Дежурная аптека. На двери любой закрытой аптеки висит список дежурных на сегодня. Я узнал об этом на третью ночь.</p></div>
+        <div class="street" aria-hidden="true">
+          <div class="shop open"><div class="sg"><b>E</b></div><div class="lb">NÖBETÇİ</div><div class="wn"></div><div class="dr"></div></div>
+          <div class="shop closed"><div class="sg"><b>E</b></div><div class="lb">KAPALI</div><div class="wn"></div><div class="dr"></div><div class="note"><i></i><i></i><i></i><i></i></div></div>
+        </div>
+      </div>
     </div>
   </div>
   <i class="notch"></i>
@@ -1005,7 +1181,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
     <p class="eyebrow red">06 · Acil durum</p>
     <h2 class="h2 split-h">Надеюсь, этот блок <em class="b">не пригодится</em></h2>
     <p class="lede">Но выучи. Скорая в крокодила не играет. Единый номер в Турции — 112. Нажми.</p>
-    <div class="sos"><button class="sosb" id="sosBtn" aria-expanded="false">112<small>ACİL</small></button></div>
+    <div class="sos"><button class="sosb" id="sosBtn" aria-expanded="false">112<small>ACİL</small></button>
+      <div class="dial" aria-hidden="true"><div class="dscr" id="dscr"><b id="dNumx"></b><small id="dSt">нажми 112</small></div>
+        <div class="keys" id="keys"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>*</span><span>0</span><span>#</span></div></div>
+    </div>
     <div class="sosl" id="sosList">
       <div class="ph"><div class="t"><b>Ambulans çağırın!</b><span>Вызовите скорую!</span></div><button class="say" data-say="Ambulans çağırın!" aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
       <div class="ph"><div class="t"><b>Yardım edin!</b><span>Помогите!</span></div><button class="say" data-say="Yardım edin!" aria-label="Озвучить"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
@@ -1432,6 +1611,120 @@ if ('IntersectionObserver' in window){
   $$('video.vid').forEach(function(v){ vio.observe(v); });
 }
 
+
+/* ===== visuals v2 ===== */
+function whenVisible(el, on, off){
+  if (!el) return;
+  if (!('IntersectionObserver' in window)){ on(); return; }
+  new IntersectionObserver(function(es){ es.forEach(function(e){ e.isIntersecting ? on() : off && off(); }); }, {threshold:.15}).observe(el);
+}
+var ICO = function(n){ return '<svg class="ic"><use href="#i-'+n+'"/></svg>'; };
+// shelves
+$$('.scene .row').forEach(function(r){
+  var cols = ['#F84A4F','#5FCFFF','#037DC2','#DCAD93','#FF9093','#2FBF9A','#F2A13A','#fff'];
+  for (var i = 0; i < +r.dataset.n; i++){ var b = document.createElement('i'); b.style.height = (14 + (i*7)%18) + 'px'; b.style.background = cols[(i*3 + r.dataset.n)%cols.length]; r.appendChild(b); }
+});
+// pantomime loop
+(function(){
+  var me = $('#sbMe'), ph = $('#sbPh'), arm = $('#armMe'), pMe = $('#pMe');
+  if (!me) return;
+  var F = [
+    ['me','Merhaba!'], ['ph','Buyurun?'],
+    ['me', ICO('hand') + 'горло…'], ['ph', ICO('candy') + 'Pastil?'],
+    ['me', ICO('thermometer') + 'жарко!'], ['ph','Ateş?'],
+    ['me','Ateş!'], ['ph','Kaç derece?'],
+    ['me','3 пальца… 9'], ['ph','12?!'],
+    ['me', ICO('skull') + 'крокодил'], ['ph', ICO('phone-outgoing') + 'Ahmet Bey!']
+  ];
+  var k = 0, tm = null;
+  function step(){
+    var f = F[k % F.length], el = f[0] === 'me' ? me : ph;
+    el.innerHTML = f[1]; el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop');
+    if (f[0] === 'me' && G && !RM){
+      gsap.fromTo(arm, {rotation:0}, {rotation:-150, duration:.3, yoyo:true, repeat:3, ease:'power2.inOut'});
+      gsap.fromTo(pMe, {rotation:0}, {rotation:k%4 ? 6 : -6, duration:.2, yoyo:true, repeat:3, ease:'sine.inOut'});
+    }
+    k++;
+  }
+  whenVisible($('#scene'), function(){ if (!tm && !RM) tm = setInterval(step, 1500); }, function(){ clearInterval(tm); tm = null; });
+})();
+// queue board ticks
+(function(){
+  var b = $('#qNow'), n = 12, tm = null; if (!b) return;
+  whenVisible(b, function(){ if (!tm && !RM) tm = setInterval(function(){ n = n >= 46 ? 12 : n + 1; b.textContent = n; if (G) gsap.fromTo(b, {yPercent:-40}, {yPercent:0, duration:.35, ease:'back.out(2)'}); }, 2600); }, function(){ clearInterval(tm); tm = null; });
+})();
+// thermometer
+(function(){
+  var r = $('#tRange'); if (!r) return;
+  var ticks = $('#ticks'), y = function(t){ return 184 - (t - 35) / 7 * 168; };
+  for (var t = 36; t <= 41; t++){ ticks.insertAdjacentHTML('beforeend', '<line x1="48" x2="56" y1="'+y(t)+'" y2="'+y(t)+'" stroke="#55555F"/><text x="60" y="'+(y(t)+3)+'">'+t+'</text>'); }
+  var N = {36:'otuz altı',37:'otuz yedi',38:'otuz sekiz',39:'otuz dokuz',40:'kırk',41:'kırk bir'};
+  function text(v){ var w = Math.floor(v); return N[w] + (v % 1 ? ' buçuk' : '') + ' derece'; }
+  function set(speak){
+    var v = +r.value, top = y(v), col = v < 37.5 ? '#5FCFFF' : v < 38.5 ? '#FF9093' : '#F84A4F';
+    var merc = $('#merc');
+    if (G && !RM){ gsap.to(merc, {attr:{y:top, height:200 - top}, fill:col, duration:.45, ease:'back.out(1.6)'}); gsap.to('#bulb', {fill:col, duration:.45}); }
+    else { merc.setAttribute('y', top); merc.setAttribute('height', 200 - top); merc.setAttribute('fill', col); $('#bulb').setAttribute('fill', col); }
+    $('#tNum').textContent = String(v).replace('.', ',');
+    $('#tTr').textContent = text(v);
+    var st = $('#tSt');
+    st.textContent = v < 37.5 ? 'Ateşim yok · температуры нет' : v < 38.5 ? 'Hafif ateşim var · небольшая' : 'Yüksek ateşim var · высокая';
+    st.classList.toggle('ok', v < 37.5);
+    if (speak) say(text(v), $('#tSay'));
+  }
+  r.addEventListener('input', function(){ set(false); });
+  r.addEventListener('change', function(){ set(true); });
+  $('#tSay').addEventListener('click', function(){ say(text(+r.value), this); });
+  set(false);
+})();
+// calendar
+(function(){
+  var cal = $('#cal'); if (!cal) return;
+  cal.innerHTML = ['Pzt','Sal','Çar','Per','Cum','Cmt','Paz'].map(function(d){ return '<div>' + d + ICO('thermometer') + '</div>'; }).join('');
+  function paint(){
+    var n = +$('#dRange').value;
+    $$('div', cal).forEach(function(c, i){ var on = i < n, was = c.classList.contains('on'); c.classList.toggle('on', on); if (on && !was && G && !RM) gsap.fromTo(c, {scale:.6, rotation:-10}, {scale:1, rotation:0, duration:.5, ease:'back.out(3)'}); });
+  }
+  $('#dRange').addEventListener('input', paint); paint();
+})();
+// day schedule
+var MEDI = {hap:'pill', surup:'flask-conical', damla:'droplet', merhem:'bandage'};
+function schedRender(){
+  var slots = {bir:['sabah'], iki:['sabah','akşam'], 'üç':['sabah','öğle','akşam']}[rx.freq];
+  var f = FORM[rx.form], med = '<span class="tk med">' + ICO(MEDI[rx.form]) + '</span>', food = '<span class="tk food">' + ICO('utensils') + '</span>', ar = '<span class="ar">→</span>';
+  $$('#sched .slot').forEach(function(s){
+    var on = slots.indexOf(s.dataset.k) > -1, q = s.querySelector('.seq');
+    s.classList.toggle('on', on);
+    q.innerHTML = !on ? '' : !f.food ? med : rx.food === 'tok' ? food + ar + med : med + ar + food;
+    if (on && G && !RM) gsap.fromTo(q.children, {scale:.3, rotation:-30}, {scale:1, rotation:0, duration:.5, stagger:.08, ease:'back.out(3)'});
+  });
+}
+var _rxRender = rxRender; rxRender = function(c){ _rxRender(c); schedRender(); };
+schedRender();
+// stars
+(function(){ var s = $('#stars'); if (!s) return; for (var i = 0; i < 28; i++){ var d = document.createElement('i'); d.style.left = Math.random()*100 + '%'; d.style.top = Math.random()*55 + '%'; d.style.animationDelay = (-Math.random()*2.6) + 's'; s.appendChild(d); } })();
+// dial 112
+(function(){
+  var keys = $$('#keys span'), num = $('#dNumx'), st = $('#dSt'), scr = $('#dscr'), busy = false;
+  if (!keys.length) return;
+  sosBtn.addEventListener('click', function(){
+    if (busy) return; busy = true;
+    num.textContent = ''; st.textContent = 'набираю…'; scr.classList.remove('call');
+    var seq = ['1','1','2'], i = 0;
+    (function next(){
+      if (i >= seq.length){ st.textContent = 'Aranıyor… · вызов'; scr.classList.add('call'); setTimeout(function(){ busy = false; }, 1200); return; }
+      var key = keys.filter(function(k){ return k.textContent === seq[i]; })[0];
+      key.classList.add('hit'); num.textContent += seq[i];
+      setTimeout(function(){ key.classList.remove('hit'); i++; setTimeout(next, 120); }, RM ? 60 : 260);
+    })();
+  });
+})();
+// 128 grid
+(function(){
+  var g = $('#g128'); if (!g) return;
+  var h = ''; for (var i = 0; i < 128; i++) h += '<i' + (i === 0 ? ' class="me"' : '') + '></i>'; g.innerHTML = h;
+})();
+
 /* ---------- counters (no GSAP fallback leaves final numbers) ---------- */
 function countUp(el){
   var to = +el.dataset.to, o = {v:0};
@@ -1461,13 +1754,16 @@ if (stage && buoy && window.matchMedia('(hover:hover)').matches){
 ScrollTrigger.create({trigger:'#hero', start:'top top', end:'bottom top', scrub:true, animation:gsap.to('#stage', {yPercent:18, ease:'none'})});
 
 // split headings
-if (window.SplitText){
+function doSplit(){
+  if (!window.SplitText) return;
   $$('.split-h').forEach(function(h){
     if (h.closest('.hero')) return;
     var st = new SplitText(h, {type:'words', wordsClass:'wd'});
     gsap.fromTo(st.words, {yPercent:55, rotation:5}, {yPercent:0, rotation:0, duration:.8, stagger:.045, ease:'back.out(2)', scrollTrigger:{trigger:h, start:'top 88%'}});
   });
+  ScrollTrigger.refresh();
 }
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(doSplit); else doSplit();
 // batch reveals
 ScrollTrigger.batch('.rv', {start:'top 92%', once:true, onEnter:function(els){ gsap.fromTo(els, {y:40, rotation:function(i){ return i%2 ? 1.5 : -1.5; }}, {y:0, rotation:0, duration:.75, stagger:.08, ease:'back.out(1.8)', overwrite:true}); }});
 // ribbons draw on scroll
@@ -1490,8 +1786,24 @@ gsap.fromTo('#stamp', {scale:2.6, rotation:-40, y:-40}, {scale:1, rotation:0, y:
 gsap.fromTo('.hex', {scale:.4, rotation:-30}, {scale:1, rotation:0, duration:.8, ease:'back.out(2.5)', scrollTrigger:{trigger:'#rec', start:'top 80%'}});
 // counters
 $$('.count').forEach(function(el){ ScrollTrigger.create({trigger:el, start:'top 90%', once:true, onEnter:function(){ countUp(el); }}); });
-// reading bar
-gsap.fromTo('.bar128 i', {scaleX:0, transformOrigin:'0 50%'}, {scaleX:1, duration:1.2, ease:'power3.out', scrollTrigger:{trigger:'.bar128', start:'top 90%'}});
+
+// marquee bands with scroll velocity
+$$('.band').forEach(function(b, i){
+  var tr = b.querySelector('.track');
+  var tw = gsap.fromTo(tr, {xPercent:i%2 ? -50 : 0}, {xPercent:i%2 ? 0 : -50, repeat:-1, ease:'none', duration:30});
+  var sk = gsap.quickTo(b, 'skewX', {duration:.4, ease:'power3'});
+  ScrollTrigger.create({trigger:b, start:'top bottom', end:'bottom top',
+    onToggle:function(self){ self.isActive ? tw.play() : tw.pause(); },
+    onUpdate:function(self){ var v = self.getVelocity(); tw.timeScale(1 + Math.min(4, Math.abs(v)/400)); sk(Math.max(-8, Math.min(8, v/-300))); }});
+});
+// ticket slides out of the machine
+gsap.fromTo('#ticket', {y:-60, rotation:-8}, {y:0, rotation:3, duration:.9, ease:'bounce.out', scrollTrigger:{trigger:'#ticket', start:'top 85%'}});
+// night shop sign swings
+gsap.fromTo('.shop.open .sg', {rotation:-8}, {rotation:8, duration:2.2, yoyo:true, repeat:-1, ease:'sine.inOut', transformOrigin:'50% 0%'});
+// 128 grid fills with scroll
+var cells = $$('#g128 i').slice(1);
+if (cells.length) gsap.fromTo(cells, {backgroundColor:'rgba(255,255,255,.08)'}, {backgroundColor:'rgba(95,207,255,.75)', stagger:{each:.02, from:'start'}, ease:'none', scrollTrigger:{trigger:'#g128', start:'top 85%', end:'top 30%', scrub:.5}});
+
 // phones 3D tilt with scroll
 var phs = $$('.phn .fr');
 if (phs.length) gsap.fromTo(phs, {rotationY:-26, rotationX:10, y:30}, {rotationY:12, rotationX:0, y:0, stagger:.05, ease:'none', scrollTrigger:{trigger:'#phones', start:'top 95%', end:'bottom 30%', scrub:.6}});
